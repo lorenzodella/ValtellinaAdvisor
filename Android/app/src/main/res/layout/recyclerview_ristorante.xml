@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/left_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_toLeftOf="@id/rating"
+            android:paddingVertical="15dp">
+
+            <TextView
+                android:id="@+id/nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:textSize="30dp"
+                android:text="L'isola"
+                android:fontFamily="cursive"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/indirizzo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nome"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="15dp"
+                android:text="Via Medaglia D'Oro Bruno Castagna, 6"
+                android:fontFamily="sans-serif-light"/>
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_favorite_border_24"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/left_layout"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="18dp"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="4.5"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/ic_baseline_star_24"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/left_layout"/>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

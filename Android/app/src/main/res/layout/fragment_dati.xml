@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.FragmentDati"
+    android:background="#E1E1E1">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/user"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="6"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/icon"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="30dp">
+
+        <TextView
+            android:id="@+id/username_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="Username: "
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:text="mario"
+            android:textSize="18dp"
+            android:padding="7dp"
+            android:background="#ccc"
+            android:singleLine="true"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textColor="?attr/colorControlNormal"/>
+
+        <TextView
+            android:id="@+id/nome_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="Nome: "
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"/>
+
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:text="Mario"
+            android:textSize="18dp"
+            android:padding="7dp"
+            android:background="#ccc"
+            android:singleLine="true"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textColor="?attr/colorControlNormal"/>
+
+        <TextView
+            android:id="@+id/cognome_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="Cognome: "
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"/>
+
+        <EditText
+            android:id="@+id/cognome"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:text="Rossi"
+            android:textSize="18dp"
+            android:padding="7dp"
+            android:background="#ccc"
+            android:singleLine="true"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textColor="?attr/colorControlNormal"/>
+
+        <TextView
+            android:id="@+id/mail_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="Mail: "
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"/>
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:nestedScrollingEnabled="true"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:background="#ccc"
+            android:padding="7dp"
+            android:singleLine="true"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textColor="?attr/colorControlNormal"
+            android:text="lorenzo.dellamatera@itisondrio.org"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/numRecensioni_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:text="Recensioni: "
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"/>
+
+        <EditText
+            android:id="@+id/numRecensioni"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:nestedScrollingEnabled="true"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:background="#ccc"
+            android:padding="7dp"
+            android:singleLine="true"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textColor="?attr/colorControlNormal"
+            android:text="5"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/mediaVoti_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:text="Media voti: "
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"/>
+
+        <EditText
+            android:id="@+id/mediaVoti"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:nestedScrollingEnabled="true"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:background="#ccc"
+            android:padding="7dp"
+            android:singleLine="true"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textColor="?attr/colorControlNormal"
+            android:text="4.3"
+            android:textSize="18dp" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/changePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_below="@id/grid"
+        android:layout_marginTop="7dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp"
+        android:text="cambio password"
+        android:textSize="12dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15dp"
+        android:text="ESCI"/>
+
+</RelativeLayout>

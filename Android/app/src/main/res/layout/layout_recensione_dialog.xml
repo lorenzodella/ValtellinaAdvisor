@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:outlineAmbientShadowColor="@color/green_darker">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/voto_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:text="Voto:"/>
+
+            <RatingBar
+                android:id="@+id/voto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/voto_desc"
+                android:numStars="5"
+                android:stepSize="1"
+                android:progressTint="@color/green_dark"
+                android:secondaryProgressTint="#00000000"/>
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:paddingTop="5dp"
+            android:focusableInTouchMode="false"
+            android:hint="Tocca per inserire la data"
+            android:fontFamily="sans-serif-light"/>
+
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15dp"
+            android:hint="Inserisci un commento"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:minLines="4"
+            android:lines="8"
+            android:scrollbars="vertical"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/bg_comment"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

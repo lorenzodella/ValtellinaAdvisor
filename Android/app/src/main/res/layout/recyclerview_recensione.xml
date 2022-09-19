@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/ristorante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/rating_comment"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/user"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="5dp"/>
+
+            <TextView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/img"
+                android:layout_toLeftOf="@id/rating_comment"
+                android:textSize="20dp"
+                android:text="Mario"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"/>
+
+            <RatingBar
+                android:id="@+id/rating_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:stepSize="1"
+                android:progressTint="@color/green_dark"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:text="2021-03-14"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15dp"
+            android:text="BlaBla\nbla"
+            android:minLines="4"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/bg_comment"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"/>
+
+        <ImageButton
+            android:id="@+id/go_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_upward_24"
+            android:rotation="45"
+            android:background="@drawable/bg_buttons"
+            android:backgroundTint="@color/green_dark"
+            android:padding="3dp"
+            android:layout_below="@id/comment"
+            android:layout_toLeftOf="@id/delete"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:background="@drawable/bg_buttons"
+            android:backgroundTint="#e03434"
+            android:layout_below="@id/comment"
+            android:padding="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

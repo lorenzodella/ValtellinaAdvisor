@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="#E1E1E1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_ristoranti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/commands"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layoutAnimation="@anim/layout_animation"
+        android:paddingBottom="40dp"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <RelativeLayout
+        android:id="@+id/commands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/buttons"
+        android:layout_marginVertical="12dp"
+        android:layout_marginLeft="10dp">
+
+        <EditText
+            android:id="@+id/edit_ristorante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/search"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:hint="Inserisci il nome del ristorante"/>
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_baseline_search_24" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/no_ristoranti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nessun ristorante trovato"
+        android:layout_centerInParent="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/green">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="5dp"
+            android:animateLayoutChanges="true"
+            android:layoutAnimation="@anim/layout_animation">
+
+            <ImageButton
+                android:id="@+id/dropdown"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:background="@drawable/ic_baseline_arrow_drop_down_24" />
+            <ImageButton
+                android:id="@+id/select_city"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_baseline_location_city_24" />
+            <ImageButton
+                android:id="@+id/select_preferiti"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_baseline_favorite_24" />
+            <ImageButton
+                android:id="@+id/select_nearby"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_baseline_location_on_24" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
